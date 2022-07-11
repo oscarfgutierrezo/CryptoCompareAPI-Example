@@ -3,3 +3,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.alert {
+    @apply mt-1 text-center text-lg font-light text-red-500 rounded-md
+}
+
+.quote-result__head {
+    @apply text-center
+}
+
+.quote-result__head-name {
+    @apply text-4xl font-medium text-[#ffaf4e] xs:text-5xl
+}
+
+.quote-result__head-price {
+    @apply text-xl font-bold text-[#3ea6fe]
+}
+
+.quote-result__info {
+    @apply pt-5 text-lg font-light
+}

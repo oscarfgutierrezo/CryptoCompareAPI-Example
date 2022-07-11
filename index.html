@@ -15,11 +15,11 @@
         </div>
         <img class="w-full max-w-sm mx-auto object-contain" src="./public/images/cryptomonedas.png" alt="">
     </header>
-    <main class="max-w-2xl mx-auto mt-10 grid gap-y-10 items-center md:grid-cols-2 md:mt-14">
-        <form class="w-full max-w-xs mx-auto flex flex-col gap-5">
-            <div>
+    <main class="max-w-2xl mx-auto mt-12 grid gap-y-10 items-center md:grid-cols-2 md:mt-14">
+        <form class="form w-full max-w-xs mx-auto flex flex-col gap-2 md:col-span-2" id="form">
+            <div class="form__currency">
                 <label class="text-lg text-white" for="">Choose your currency</label>
-                <select class="w-full mt-1 py-1 text-[#141E30] bg-[#E2F1FF] rounded-md" name="currency" id="currency">
+                <select class="w-full mt-1 py-1 text-[#141E30] bg-[#E2F1FF] rounded-md" name="currency" id="form__currency-select">
                     <option value="" disabled selected>Choose your currency</option>
                     <option value="USD">United States Dollar</option>
                     <option value="EUR">Euro</option>
@@ -27,25 +27,15 @@
                     <option value="COP">Colombian Peso</option>
                 </select>
             </div>
-            <div>
+            <div class="form__crypto">
                 <label class="text-lg text-white" for="">Choose your cryptocurrency</label>
-                <select class="w-full mt-1 py-1 text-[#141E30] bg-[#E2F1FF] rounded-md" name="crypto" id="crypto">
+                <select class="form__crypto-select w-full mt-1 py-1 text-[#141E30] bg-[#E2F1FF] rounded-md" name="crypto" id="form__crypto-select">
                     <option value="" disabled selected>Choose your cryptocurrency</option>
                 </select>
             </div>
+            <button class="w-full mt-1 py-0.5 text-lg font-medium text-white tracking-wide bg-[#9498ff] rounded-md hover:bg-[#7378f8] duration-200" type="submit" id="form__btn">Quote</button>
         </form>
-        <section class="text-center text-white">
-            <div class="text-center">
-                <h2 class="text-4xl font-medium text-[#ffaf4e] xs:text-5xl">Bitcoin</h2>
-                <p class="text-xl font-bold text-[#3ea6fe]">19,758 USD</p>
-            </div>
-            <div class="pt-5 text-lg font-light">
-                <p>Today's highest price:<span class="font-bold"> 20,000 USD</span></p>
-                <p>Today's lowest price:<span class="font-bold"> 19,140 USD</span></p>
-                <p>Variation last 24hrs:<span class="font-bold"> 1,4 %</span></p>
-                <p>Last update:<span class="font-bold"> Just Now</span></p>
-            </div>
-        </section>
+        <section class="quote-result text-center text-white" id="quote-result"></section>
     </main>
     <script src="./public/js/app.js"></script>
 </body>
