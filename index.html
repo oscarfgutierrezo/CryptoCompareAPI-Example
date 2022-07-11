@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoCompareAPI</title>
+    <link rel="stylesheet" href="./public/css/output.css">
+</head>
+<body class="min-h-screen px-5 py-14 container bg-gradient-to-b from-[#141E30] to-[#243B55] xs:px-10">
+    <header class="flex flex-col gap-7 xs:gap-10">
+        <div class="text-white text-center">
+            <h1 class="text-4xl font-medium xs:text-5xl">CryptoCompare</h1>
+            <p class="text-2xl text-[#3ea6fe] xs:text-3xl">Quote Prices</p>
+        </div>
+        <img class="w-full max-w-sm mx-auto object-contain" src="./public/images/cryptomonedas.png" alt="">
+    </header>
+    <main class="max-w-2xl mx-auto mt-10 grid gap-y-10 items-center md:grid-cols-2 md:mt-14">
+        <form class="w-full max-w-xs mx-auto flex flex-col gap-5">
+            <div>
+                <label class="text-lg text-white" for="">Choose your currency</label>
+                <select class="w-full mt-1 py-1 text-[#141E30] bg-[#E2F1FF] rounded-md" name="currency" id="currency">
+                    <option value="" disabled selected>Choose your currency</option>
+                    <option value="USD">United States Dollar</option>
+                    <option value="EUR">Euro</option>
+                    <option value="GBP">Sterling</option>
+                    <option value="COP">Colombian Peso</option>
+                </select>
+            </div>
+            <div>
+                <label class="text-lg text-white" for="">Choose your cryptocurrency</label>
+                <select class="w-full mt-1 py-1 text-[#141E30] bg-[#E2F1FF] rounded-md" name="crypto" id="crypto">
+                    <option value="" disabled selected>Choose your cryptocurrency</option>
+                </select>
+            </div>
+        </form>
+        <section class="text-center text-white">
+            <div class="text-center">
+                <h2 class="text-4xl font-medium text-[#ffaf4e] xs:text-5xl">Bitcoin</h2>
+                <p class="text-xl font-bold text-[#3ea6fe]">19,758 USD</p>
+            </div>
+            <div class="pt-5 text-lg font-light">
+                <p>Today's highest price:<span class="font-bold"> 20,000 USD</span></p>
+                <p>Today's lowest price:<span class="font-bold"> 19,140 USD</span></p>
+                <p>Variation last 24hrs:<span class="font-bold"> 1,4 %</span></p>
+                <p>Last update:<span class="font-bold"> Just Now</span></p>
+            </div>
+        </section>
+    </main>
+    <script src="./public/js/app.js"></script>
+</body>
+</html>
