@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CryptoCompareAPI</title>
     <link rel="stylesheet" href="./public/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body class="min-h-screen px-5 py-14 container bg-gradient-to-b from-[#141E30] to-[#243B55] xs:px-10">
     <header class="flex flex-col gap-7 xs:gap-10">
@@ -17,26 +18,38 @@
     </header>
     <main class="max-w-2xl mx-auto mt-12 grid gap-y-10 items-center md:grid-cols-2 md:mt-14">
         <form class="form w-full max-w-xs mx-auto flex flex-col gap-2 md:col-span-2" id="form">
-            <div class="form__currency">
-                <label class="text-lg text-white" for="">Choose your currency</label>
-                <select class="w-full mt-1 py-1 text-[#141E30] bg-[#E2F1FF] rounded-md" name="currency" id="form__currency-select">
-                    <option value="" disabled selected>Choose your currency</option>
-                    <option value="USD">United States Dollar</option>
-                    <option value="EUR">Euro</option>
-                    <option value="GBP">Sterling</option>
-                    <option value="COP">Colombian Peso</option>
-                </select>
-            </div>
             <div class="form__crypto">
-                <label class="text-lg text-white" for="">Choose your cryptocurrency</label>
-                <select class="form__crypto-select w-full mt-1 py-1 text-[#141E30] bg-[#E2F1FF] rounded-md" name="crypto" id="form__crypto-select">
-                    <option value="" disabled selected>Choose your cryptocurrency</option>
-                </select>
+                <p class="text-lg text-white" for="">Choose your cryptocurrency</p>
+                <div class="mb-1 px-5 py-1 flex items-center justify-between bg-white rounded-lg cursor-pointer" id="form__crypto-head">Choose your Cryptocurrency</div>
+                <div class="form__crypto-options-container" id="form__crypto-options-container"></div>
+            </div>
+            <div class="form__currency">
+                <p class="text-lg text-white">Choose your Currency</p>
+                <div class="mb-1 px-5 py-1 flex items-center justify-between bg-white rounded-lg cursor-pointer" id="form__currency-head">Choose your Currency</div>
+                <div class="form__currency-options-container" id="form__currency-options-container">
+                    <div class="form__currency-option">
+                        <input class="hidden" type="radio" name="currency" value="USD">
+                        <label>United States Dollar</label>
+                    </div>
+                    <div class="form__currency-option">
+                        <input class="hidden" type="radio" name="currency" value="EUR">
+                        <label>Euro</label>
+                    </div>
+                    <div class="form__currency-option">
+                        <input class="hidden" type="radio" name="currency" value="GBP">
+                        <label>Sterling</label>
+                    </div>
+                    <div class="form__currency-option">
+                        <input class="hidden" type="radio" name="currency" value="COP">
+                        <label>Colombian Peso</label>
+                    </div>
+                </div>
             </div>
             <button class="w-full mt-1 py-0.5 text-lg font-medium text-white tracking-wide bg-[#9498ff] rounded-md hover:bg-[#7378f8] duration-200" type="submit" id="form__btn">Quote</button>
         </form>
         <section class="quote-result text-center text-white" id="quote-result"></section>
     </main>
-    <script src="./public/js/app.js"></script>
+    <script src="./public/js/classes/APP.js" type="module"></script>
+    <script src="./public/js/collapsibles.js" type="module"></script>
 </body>
 </html>

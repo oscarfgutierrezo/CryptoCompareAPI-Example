@@ -4,6 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.form__currency-options-container, .form__crypto-options-container {
+    @apply bg-white max-h-0 opacity-0 transition-all duration-500 rounded-lg overflow-y-auto
+}
+
+.form__currency-options-container.active, .form__crypto-options-container.active {
+    @apply opacity-100
+}
+
+.form__currency-option, .form__crypto-option {
+    @apply px-5 py-1 hover:bg-[#9498ff] hover:text-white
+}
+
 .alert {
     @apply mt-1 text-center text-lg font-light text-red-500 rounded-md
 }
